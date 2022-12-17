@@ -131,13 +131,13 @@ const personalMovieDB = {
 
             let genres = prompt(`Введите ваши любимые жанры через запятую`).toLocaleLowerCase();
 
-            if (genres === '' || genres === null) {
-                console.log('Вы ввели не коректные данные или не ввели их вообще');
+            if (genres === '' || genres === null) { // Значение "null" соответствует кнопке "Отмена";
+                console.log('Вы ввели некорректные данные или не ввели их вообще');
                 i--;
             } else {
                 // personalMovieDB.genres[i - 1] = genre;
                 personalMovieDB.genres = genres.split(', ');
-                personalMovieDB.genres.sort(); // Метод sort(); сортирует кириллицу с учетом регистра (снало большие буквы, после маленькие);
+                personalMovieDB.genres.sort(); // Метод sort(); сортирует кириллицу с учетом регистра (сначало большие буквы, потом маленькие);
             }
 
         }
